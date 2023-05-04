@@ -1,0 +1,38 @@
+{
+  "name": "template-node",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Base template for node.js projects",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint src/**/*.js",
+    "prettier": "prettier --write \"src/**/*.js\"",
+    "prepare": "husky install"
+  },
+  "author": {
+    "name": "Your Name",
+    "email": "alvaroj.arturo@gmail.com",
+    "url": "https://www.mywebsite.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "nodemon": "2.0.22",
+    "prettier": "2.8.8"
+  },
+  "imports": {
+    "#Lib/*": "./src/lib/*"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
